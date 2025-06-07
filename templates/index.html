@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Prayer Generator</title>
+    <link rel="stylesheet" href="{{url_for('static', filename ='style.css' )}}">
+</head>
+<body>
+    <h1 >Morning Prayer Generator</h1>
+    <img src="{{url_for('static', filename ='BHCSlogo.png')}}" alt="Bishop Heelan Logo">
+    <form action="/generate-pdf" method="POST">
+        <label for="FirstDay">Please select the first day of school:    </label>
+        <input type="date" name="FirstDay" id="FirstDay">
+        <br>
+        <br>
+        <label for="LastDay">Please select the last day of school:  </label>
+        <input type="date" name="LastDay" id="LastDay">
+        <br>
+        <br>
+        <label for="Easter">Please select the date of Easter:   </label>
+        <input type="date" name="Easter" id="Easter">
+        <br>
+        <h2>Add up to 10 breaks below. If there are less than 10 breaks, it is ok to leave dates unselected.</h2>
+        <label for="Break1Start">Please select the first day of the break:   </label>
+        <input type="date" name="Break1Start" id="Break1Start">
+        <label for="Break1End">Please select the last day of the break:   </label>
+        <input type="date" name="Break1End" id="Break1End">
+        <br>
+        <br>
+        <label for="Break2Start">Please select the first day of the break:   </label>
+        <input type="date" name="Break2Start" id="Break2Start">
+        <label for="Break2End">Please select the last day of the break:   </label>
+        <input type="date" name="Break2End" id="Break2End">
+        <br>
+        <br>
+        <label for="Break3Start">Please select the first day of the break:   </label>
+        <input type="date" name="Break3Start" id="Break3Start">
+        <label for="Break3End">Please select the last day of the break:   </label>
+        <input type="date" name="Break3End" id="Break3End">
+        <br>
+        <br>
+        <label for="Break4Start">Please select the first day of the break:   </label>
+        <input type="date" name="Break4Start" id="Break4Start">
+        <label for="Break4End">Please select the last day of the break:   </label>
+        <input type="date" name="Break4End" id="Break4End">
+        <br>
+        <br>
+        <label for="Break5Start">Please select the first day of the break:   </label>
+        <input type="date" name="Break5Start" id="Break5Start">
+        <label for="Break5End">Please select the last day of the break:   </label>
+        <input type="date" name="Break5End" id="Break5End">
+        <br>
+        <br>
+        <label for="Break6Start">Please select the first day of the break:   </label>
+        <input type="date" name="Break6Start" id="Break6Start">
+        <label for="Break6End">Please select the last day of the break:   </label>
+        <input type="date" name="Break6End" id="Break6End">
+        <br>
+        <br>
+        <label for="Break7Start">Please select the first day of the break:   </label>
+        <input type="date" name="Break7Start" id="Break7Start">
+        <label for="Break7End">Please select the last day of the break:   </label>
+        <input type="date" name="Break7End" id="Break7End">
+        <br>
+        <br>
+         <label for="Break8Start">Please select the first day of the break:   </label>
+        <input type="date" name="Break8Start" id="Break8Start">
+        <label for="Break8End">Please select the last day of the break:   </label>
+        <input type="date" name="Break8End" id="Break8End">
+        <br>
+        <br>
+         <label for="Break9Start">Please select the first day of the break:   </label>
+        <input type="date" name="Break9Start" id="Break9Start">
+        <label for="Break9End">Please select the last day of the break:   </label>
+        <input type="date" name="Break9End" id="Break9End">
+        <br>
+        <br>
+         <label for="Break10Start">Please select the first day of the break:   </label>
+        <input type="date" name="Break10Start" id="Break10Start">
+        <label for="Break10End">Please select the last day of the break:   </label>
+        <input type="date" name="Break10End" id="Break10End">
+        <input id = "submit" type="submit" value="Create Morning Prayer PDF">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+h1, h2, h3 {
+    color: navy;
+}
+
+img{
+    margin-right: 50px;
+    float: right;
+    height: 100px;
+}
+
+#submit{
+    float: right;
+    background-color: navy;
+    border-color: goldenrod;
+    color: white;
+    height: 65px;
+    width: 250px;
+    border-radius: 10px;
+    margin-right: 50px;
+    font-weight: bolder;
+}
