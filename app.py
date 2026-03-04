@@ -28,7 +28,7 @@ def findReading(date):
 
 #Getting text from previous Morning Prayer Docs
 inputdoc1 = Document()
-inputdoc1.LoadFromFile("Morning Prayer Dates (Updated 5_22_2025).docx")
+inputdoc1.LoadFromFile("Morning Prayer Dates (Updated 3_4_2026).docx")
 text1 = inputdoc1.GetText()
 
 app = Flask(__name__)       
@@ -207,4 +207,5 @@ def generate_pdf_file(FirstDay, LastDay, easter, ash, daysoff):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
