@@ -188,7 +188,7 @@ def generate_pdf_file(FirstDay, LastDay, easter, ash, daysoff):
             else:
                 reading = findReading('@' + str(date.month) + '/' + str(date.day))
 
-            if date.strftime('%A') == "Friday" and (ash < date < easter):
+            if (date.strftime('%A') == "Friday") and (ash < date < easter) and (date.strftime('%B %d') not in ('March 19', 'March 25'):
                 reading = reading + "\n" + findReading("@LentFriday")
 
             printing_date = str(date.strftime("%A")) + ', ' + str(date.strftime("%B")) + ' ' + str(date.day) + ', ' + str(date.year)
