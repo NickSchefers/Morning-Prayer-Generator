@@ -152,7 +152,7 @@ def generate_pdf():
             Break10Start = Break10Start + timedelta(days = 1)
 
     pdf_file = generate_pdf_file(FirstDay, LastDay, Easter, AshWed, days_off)
-    return send_file(pdf_file, as_attachment=True, download_name=f"Morning Prayer {FirstDay.year}.pdf")
+    return send_file(pdf_file, as_attachment=True, download_name=f"Morning Prayer {FirstDay.year} - {FirstDay.year + 1}.pdf")
 
 def generate_pdf_file(FirstDay, LastDay, easter, ash, daysoff):
     buffer = BytesIO()
