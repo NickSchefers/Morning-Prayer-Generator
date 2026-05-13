@@ -164,33 +164,33 @@ def generate_pdf_file(FirstDay, LastDay, easter, ash, daysoff):
 
     while (date <= LastDay):
         if (date.strftime('%A') != "Saturday" and date.strftime('%A') != "Sunday" and existsInList(date, daysoff) == False):
-            reading = findReading(str(date.month) + '/' + str(date.day))
+            reading = findReading('@' + str(date.month) + '/' + str(date.day))
             if date == (easter + timedelta(days = 9)):
-                reading = findReading("Vocations1")
+                reading = findReading("@Vocations1")
             elif (easter + timedelta(days = 9)) < date < (easter + timedelta(days = 21)):
-                reading = findReading("Vocations2")
+                reading = findReading("@Vocations2")
             elif date == (ash):
-                reading = findReading("AshWed")
+                reading = findReading("@AshWed")
             elif date == (easter - timedelta(days = 6)):
-                reading = findReading("HolyMon")
+                reading = findReading("@HolyMon")
             elif date == (easter - timedelta(days = 5)):
-                reading = findReading("HolyTues")
+                reading = findReading("@HolyTues")
             elif date == (easter - timedelta(days = 4)):
-                reading = findReading("HolyWed")
+                reading = findReading("@HolyWed")
             elif date == (easter + timedelta(days = 2)):
-                reading = findReading("OctTues")
+                reading = findReading("@OctTues")
             elif date == (easter + timedelta(days = 3)):
-                reading = findReading("OctWed")
+                reading = findReading("@OctWed")
             elif date == (easter + timedelta(days = 4)):
-                reading = findReading("OctThurs")
+                reading = findReading("@OctThurs")
             elif date == (easter + timedelta(days = 5)):
-                reading = findReading("OctFri")
+                reading = findReading("@OctFri")
             
             else:
-                reading = findReading(str(date.month) + '/' + str(date.day))
+                reading = findReading('@' + str(date.month) + '/' + str(date.day))
 
             if date.strftime('%A') == "Friday" and (ash < date < easter):
-                reading = reading + "\n" + findReading("LentFriday")
+                reading = reading + "\n" + findReading("@LentFriday")
 
             printing_date = str(date.strftime("%A")) + ', ' + str(date.strftime("%B")) + ' ' + str(date.day) + ', ' + str(date.year)
             p1 = Paragraph(f"{printing_date} <br/><br/> Student 1 <br/><br/>Good morning.<br/>Please stand for our prayer and pledge of allegiance, and for all in the halls, please stop and pray.<br/><br/>My name is ___________ , and I am joined by  ___________.<br/><br/>Let us pray:<br/> In the name of the Father, and of the Son, and of the Holy Spirit.<br/><br/>{reading}<br/><br/>Pause<br/><br/>Student 2:<br/><br/>Caring for the needs of all here present let us pray together:<br/>Our Father….<br/>Hail Mary…<br/><br/>We offer these prayers and this day in the name of the Father and of the Son and of the Holy Spirit.  Amen.<br/><br/>And to honor our country, let us all say:<br/>I pledge allegiance to the flag…")
