@@ -166,26 +166,25 @@ def generate_pdf_file(FirstDay, LastDay, easter, ash, daysoff):
         if (date.strftime('%A') != "Saturday" and date.strftime('%A') != "Sunday" and existsInList(date, daysoff) == False):
             reading = findReading('@' + str(date.month) + '/' + str(date.day))
             if date == (easter + timedelta(days = 9)):
-                reading = findReading("@Vocations1")
+                reading = findReading('@Vocations1')
             elif (easter + timedelta(days = 9)) < date < (easter + timedelta(days = 21)):
-                reading = findReading("@Vocations2")
+                reading = findReading('@Vocations2')
             elif date == (ash):
-                reading = findReading("@AshWed")
+                reading = findReading('@AshWed')
             elif date == (easter - timedelta(days = 6)):
-                reading = findReading("@HolyMon")
+                reading = findReading('@HolyMon')
             elif date == (easter - timedelta(days = 5)):
-                reading = findReading("@HolyTues")
+                reading = findReading('@HolyTues')
             elif date == (easter - timedelta(days = 4)):
-                reading = findReading("@HolyWed")
+                reading = findReading('@HolyWed')
             elif date == (easter + timedelta(days = 2)):
-                reading = findReading("@OctTues")
+                reading = findReading('@OctTues')
             elif date == (easter + timedelta(days = 3)):
-                reading = findReading("@OctWed")
+                reading = findReading('@OctWed')
             elif date == (easter + timedelta(days = 4)):
-                reading = findReading("@OctThurs")
+                reading = findReading('@OctThurs')
             elif date == (easter + timedelta(days = 5)):
-                reading = findReading("@OctFri")
-            
+                reading = findReading('@OctFri')            
             else:
                 reading = findReading('@' + str(date.month) + '/' + str(date.day))
 
